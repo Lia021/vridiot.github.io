@@ -735,65 +735,6 @@ document.addEventListener('DOMContentLoaded', function() {
          color: 0xffff00
      });
 
-     //material.transparent = true;
-     //material.opacity = 0;
-     /*var bitch_slap = new THREE.Mesh(geometry, material);
-     bitch_slap.position.z = 1;
-     bitch_slap.position.y = 2;
-     var skeleton;
-     var hand;
-     var should_send = false;
-
-     //Gotta give her what she wants. Bwahahaha!
-     var promises = [altspace.getThreeJSTrackingSkeleton(), altspace.getEnclosure()];
-     Promise.all(promises).then(function(array) {
-
-         skeleton = array[0];
-         sim.scene.add(skeleton);
-         altspace.getUser().then(function(userInfo) {
-             if (userInfo && userInfo.displayName && (userInfo.displayName == "Jacob" || userInfo.displayName == "jacob" || userInfo.displayName == "enderthexenocide")) {
-                 hand = skeleton.getJoint('Middle', "Right", 2);
-                 if (hand != undefined) {
-                     bitch_slap.position.y = 0;
-                     bitch_slap.position.z = 0;
-                     hand.add(bitch_slap);
-                     should_send = true;
-                 }
-             } else {
-                 var colliderBox = new NativeComponent('n-mesh-collider', {
-                     type: "environment",
-                     convex: true
-                 }, bitch_slap);
-                 sim.scene.add(bitch_slap);
-             }
-         });
-
-     }).catch(function(err) {
-         console.log('Well Jacob, you fucked something up: ', err);
-     });
-
-     setInterval(function(e) {
-         if (should_send) {
-             if (hand != undefined) {
-                 socket.emit('update_position', {
-                     position: {
-                         x: hand.position.x,
-                         y: hand.position.y,
-                         z: hand.position.z
-                     }
-                 });
-             }
-         }
-     }, 150);
-
-     socket.on('position', function(data) {
-         if (data && !should_send) {
-             bitch_slap.position.y = data.y;
-             bitch_slap.position.x = data.x;
-             bitch_slap.position.z = data.z;
-         }
-     });*/
-
      setInterval(function(e) {
          $.ajax({
              type: "GET",
