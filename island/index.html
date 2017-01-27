@@ -3,13 +3,13 @@
 
 <head>
     <title>Amber's Paradise Island</title>
-    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script>
     <script src="https://rawgit.com/mrdoob/three.js/baff49679505eb90d84a1effa0afc80a90eb434e/examples/js/loaders/GLTFLoader.js"></script>
     <script src="https://rawgit.com/oOblik/AltspaceVR-Native-Components-JS/master/js/JSNativeComponents.js"></script>
     <script src="./assets/aframe-altspace-component.js"></script>
-    <script src="./assets/altspace.min.js"></script>-->
-    <script src="./assets/bundle.js"></script>
+    <script src="./assets/altspace.min.js"></script>
+    <!--<script src="./assets/bundle.js"></script>-->
     <script>
         (function(i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;
@@ -25,6 +25,7 @@
 
         ga('create', 'UA-89786610-1', 'auto');
         ga('send', 'pageview');
+        
         var mobile = false;
         var audio = "ogg";
         var agent = "desktop";
@@ -48,7 +49,6 @@
             <script>
                 document.write('<a-asset-item id="sco" src="./assets/' + agent + '/' + timeOfDay + '/island.dae"></a-asset-item>');
             </script>
-            <a-asset-item id="sign" src="./assets/sign.dae"></a-asset-item>
             <a-asset-item id="cl" src="./assets/collider.dae"></a-asset-item>
             <script>
                 document.write('<a-asset-item id="radio" src="./assets/' + agent + '/' + timeOfDay + '/radio.dae"></a-asset-item>');
