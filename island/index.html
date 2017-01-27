@@ -3,11 +3,6 @@
 
 <head>
     <title>Amber's Paradise Island</title>
-    <!--<script src="./assets/jquery.min.js"></script>
-    <script src="./assets/aframe.min.js"></script>
-    <script src="https://rawgit.com/mrdoob/three.js/baff49679505eb90d84a1effa0afc80a90eb434e/examples/js/loaders/GLTFLoader.js"></script>
-    <script src="./assets/aframe-altspace-component.js"></script>
-    <script src="./assets/altspace.min.js"></script>-->
     <script src="./min/?g=js"></script>
     <script>
         (function(i, s, o, g, r, a, m) {
@@ -16,7 +11,7 @@
                 (i[r].q = i[r].q || []).push(arguments)
             }, i[r].l = 1 * new Date();
             a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
+            m = s.getElementsByTagName(o)[0];
             a.async = 1;
             a.src = g;
             m.parentNode.insertBefore(a, m)
@@ -24,7 +19,7 @@
 
         ga('create', 'UA-89786610-1', 'auto');
         ga('send', 'pageview');
-        
+
         var mobile = false;
         var audio = "ogg";
         var agent = "desktop";
@@ -147,6 +142,8 @@
         <a-entity position="0 -0.05 0" collada-model="#cl" id="cl-a" altspace-cursor-collider="enabled: false" n-mesh-collider="type: environment; convex: false"></a-entity>
 
         <a-entity material="color: #004010; shader: flat;" scale="0 0 0" id="songSync" sync-transform sync-color sync></a-entity>
+
+        <a-entity id="load-message" position="0 2.7 -0.7" n-text="text:Hey there! Loading: 0%; fontSize: 1; width: 1; height: 0.2;"></a-entity>
 
     </a-scene>
 
