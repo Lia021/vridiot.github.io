@@ -756,6 +756,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 seagull_1.material = seagull_mat2;
                 seagull_1.material.transparent = true;
+                seagull_1.material.side = THREE.DoubleSide;
                 seagull_1.material.needsUpdate = true;
                 seagull_1.needsUpdate = true;
 
@@ -764,6 +765,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     transparent: true
                 });
                 seagull_2.material = seagull_mat3;
+                seagull_2.material.side = THREE.DoubleSide;
                 seagull_2.material.transparent = true;
                 seagull_2.material.needsUpdate = true;
                 seagull_2.needsUpdate = true;
@@ -773,6 +775,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     transparent: true
                 });
                 seagull_3.material = seagull_mat2;
+                seagull_3.material.side = THREE.DoubleSide;
                 seagull_3.material.transparent = true;
                 seagull_3.material.needsUpdate = true;
                 seagull_3.needsUpdate = true;
