@@ -5,6 +5,36 @@
     <title>Amber's Paradise Island</title>
     <script src="./min/?g=js"></script>
     <script>
+        THREE.Loader.Handlers.add(/jpe?g|png|gif|tga|bmp|dds/i, {
+            load: function(url) {
+                if(url && !url.startsWith('http') && !url.startsWith('//')) {
+                    if(url.startsWith('/')) {
+                        url = location.origin + url;
+                    }
+                    else {
+                        var currPath = location.pathname;
+                        if(!location.pathname.endsWith('/')) currPath = location.pathname.split('/').slice(0, -1).join('/') + '/';
+                        url = location.origin + currPath + url;
+                    }
+                }
+                return new THREE.Texture({ src: url });
+            }
+        });
+
+        function LoadTexture(url) {
+            if(url && !url.startsWith('http') && !url.startsWith('//')) {
+                if(url.startsWith('/')) {
+                    url = location.origin + url;
+                }
+                else {
+                    var currPath = location.pathname;
+                    if(!location.pathname.endsWith('/')) currPath = location.pathname.split('/').slice(0, -1).join('/') + '/';
+                    url = location.origin + currPath + url;
+                }
+            }
+
+            return new THREE.Texture({ src: url });
+        };
         (function(i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;
             i[r] = i[r] || function() {
@@ -147,7 +177,7 @@
 
     </a-scene>
 
-    <script src="./min/?g=footer_js"></script>
+    <script src="./assets/main.js"></script>
 
 </body>
 
