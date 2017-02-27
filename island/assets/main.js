@@ -1,32 +1,3 @@
-THREE.Loader.Handlers.add(/jpe?g|png|gif|tga|bmp|dds/i, {
-    load: function(url) {
-        if(url && !url.startsWith('http') && !url.startsWith('//')) {
-            if(url.startsWith('/')) {
-                url = location.origin + url;
-            }
-            else {
-                var currPath = location.pathname;
-                if(!location.pathname.endsWith('/')) currPath = location.pathname.split('/').slice(0, -1).join('/') + '/';
-                url = location.origin + currPath + url;
-            }
-        }
-        return new THREE.Texture({ src: url });
-    }
-});
-function LoadTexture(url) {
-    if(url && !url.startsWith('http') && !url.startsWith('//')) {
-        if(url.startsWith('/')) {
-            url = location.origin + url;
-        }
-        else {
-            var currPath = location.pathname;
-            if(!location.pathname.endsWith('/')) currPath = location.pathname.split('/').slice(0, -1).join('/') + '/';
-            url = location.origin + currPath + url;
-        }
-    }
-
-    return new THREE.Texture({ src: url });
-};
 document.addEventListener('DOMContentLoaded', function() {
     var renderer = altspace.getThreeJSRenderer({
         initialSerializationBufferSize: 640000
@@ -655,7 +626,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (timeOfDay == "night") {
         box = "NightSky.jpg";
     }
-    var texture = LoadTexture("assets/" + agent + "/" + timeOfDay + "/" + box);
+    var texture = THREE.ImageUtils.loadTexture("./assets/" + agent + "/" + timeOfDay + "/" + box);
     var skyGeo = new THREE.SphereGeometry(400, 16, 16);
     var material = new THREE.MeshPhongMaterial({
         map: texture
@@ -694,28 +665,28 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 15000);
 
     if (!mobile) {
-        //var loader = new THREE.TextureLoader();
+        var loader = new THREE.TextureLoader();
         var assetsLoadedCount = 0;
         var texts = [{
-                tex: LoadTexture('assets/seagull-1.png')
+                tex: loader.load('./assets/seagull-1.png', loadedTexture)
             },
             {
-                tex: LoadTexture('assets/seagull-2.png')
+                tex: loader.load('./assets/seagull-1.png', loadedTexture)
             },
             {
-                tex: LoadTexture('assets/seagull-3.png')
+                tex: loader.load('./assets/seagull-1.png', loadedTexture)
             },
             {
-                tex: LoadTexture('assets/seagull-4.png')
+                tex: loader.load('./assets/seagull-1.png', loadedTexture)
             },
             {
-                tex: LoadTexture('assets/seagull-5.png')
+                tex: loader.load('./assets/seagull-1.png', loadedTexture)
             },
             {
-                tex: LoadTexture('assets/seagull-6.png')
+                tex: loader.load('./assets/seagull-1.png', loadedTexture)
             },
             {
-                tex: LoadTexture('assets/seagull-7.png')
+                tex: loader.load('./assets/seagull-1.png', loadedTexture)
             }
         ];
 
