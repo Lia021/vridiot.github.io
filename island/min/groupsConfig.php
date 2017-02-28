@@ -12,6 +12,6 @@
  **/
 
 return array(
-    'js' => array('//assets/jquery.min.js', '//assets/aframe.min.js', '//assets/aframe-altspace-component.js', '//assets/altspace.min.js')
+    'js' => array('//assets/jquery.min.js', '//assets/aframe.min.js', '//assets/aframe-altspace-component.js', '//assets/altspace.min.js'),
     'footer_js' => array('//assets/main.js')
 );

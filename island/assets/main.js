@@ -690,7 +690,12 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         ];
 
-        runAnimation();
+        function loadedTexture() {
+             assetsLoadedCount++;
+             if (assetsLoadedCount == 7) {
+                 runAnimation();
+             }
+         }
 
         function runAnimation() {
 
