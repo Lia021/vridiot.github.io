@@ -13,6 +13,7 @@ THREE.Loader.Handlers.add(/jpe?g|png|gif|tga|bmp|dds/i, {
         return new THREE.Texture({ src: url });
     }
 });
+
 function LoadTexture(url) {
     if(url && !url.startsWith('http') && !url.startsWith('//')) {
         if(url.startsWith('/')) {
