@@ -712,9 +712,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 seagull_1.material.opacity = 0.5;
             }
             seagull_1.material.transparent = true;
-            var diff = ((Date.now() - 1485117109000) / 500000) % 1;
-            console.log(diff);
-            var correct_pos = 1037 - (2000 * diff);
+            var diff = ((Date.now() - 1485117109000) / 900000) % 1;
+            var correct_pos = 2037 - (4000 * diff);
             seagull_1.position.x = correct_pos;
             seagull_1.position.y = 12;
             seagull_1.position.z = -30;
@@ -790,8 +789,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
             function animation_fly() {
 
-                var diff = ((Date.now() - 1485117109000) / 500000) % 1;
-                var correct_pos = 1037 - (2000 * diff);
+                var diff = ((Date.now() - 1485117109000) / 900000) % 1;
+                var correct_pos = 2037 - (4000 * diff);
                 var birdSound = document.querySelector('#birds');
                 birdSound.setAttribute('position', correct_pos + ' ' + birdSound.getAttribute('position').y + ' ' + birdSound.getAttribute('position').z);
                 seagull_1.position.x = correct_pos;
